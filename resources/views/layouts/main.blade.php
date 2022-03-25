@@ -4,6 +4,7 @@ This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,61 +16,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('backend/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('template/css/style.css')}}">
   @livewireStyles
 </head>
+
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- Navbar -->
-@include('components.navbar')
-  <!-- /.navbar -->
+    <!-- Navbar -->
+    @include('components.navbar')
+    <!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  @include('components.sidebar')
+    <!-- Main Sidebar Container -->
+    @include('components.sidebar')
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    {{ $slot }}
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      {{ $slot }}
+      <!-- /.content -->
     </div>
-  </aside>
-  <!-- /.control-sidebar -->
+    <!-- /.content-wrapper -->
 
-  <!-- Main Footer -->
-@include('components.footer')
-</div>
-<!-- ./wrapper -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
 
-<!-- REQUIRED SCRIPTS -->
+    <!-- Main Footer -->
+    @include('components.footer')
+  </div>
+  <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="{{asset('backend/plugins/jquery/jquery.min.js')}}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- AdminLTE App -->
-<script src="{{asset('backend/dist/js/adminlte.min.js')}}"></script>
-@livewireScripts
+  <!-- REQUIRED SCRIPTS -->
 
-<script>
-  window.addEventListener('show-desform',event =>{
-    
-    $('#desForm').modal('show');
-  })
+  <!-- jQuery -->
+  <script src="{{asset('backend/plugins/jquery/jquery.min.js')}}"></script>
+  <!-- Bootstrap 4 -->
+  <script src="{{asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <!-- AdminLTE App -->
+  <script src="{{asset('backend/dist/js/adminlte.min.js')}}"></script>
+  @livewireScripts
 
-  window.addEventListener('hide-desform',event =>{
-    console.log('hide wala');
-    $('#desForm').modal('hide');
-  })
-</script>
+  <script>
+    window.addEventListener('show-desform', event => {
+
+      $('#desForm').modal('show');
+    })
+
+    window.addEventListener('hide-desform', event => {
+      console.log('hide wala');
+      $('#desForm').modal('hide');
+    })
+  </script>
 </body>
+
 </html>
