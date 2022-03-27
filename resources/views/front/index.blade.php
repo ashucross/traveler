@@ -480,7 +480,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi1.jpg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi1.jpg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -492,7 +492,7 @@
                                 </div>
                                 <div class="card mb-2">
 
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi6.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi6.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -503,7 +503,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi2.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi2.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -522,7 +522,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi5.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi5.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -533,7 +533,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi4.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi4.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -544,7 +544,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/thar.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/thar.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -563,7 +563,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/traveler.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/traveler.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -574,7 +574,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/baleno.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/baleno.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -585,7 +585,7 @@
 
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main3" src="{{asset('template/images/scorpio.jpeg')}}" alt="Card image cap">
+                                    <a href="texi_service"> <img class="card-img-top slider_main3" src="{{asset('template/images/scorpio.jpeg')}}" alt="Card image cap"></a>
 
                                 </div>
                             </div>

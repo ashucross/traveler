@@ -9,29 +9,28 @@ use Auth;
 
 class FrontController extends Controller
 {
-    
+
     //
     public function index(Request $request)
     {
         $countVisitor = DB::table('shetabit_visits')->count();
         $ip = $request->ip();
-        if($ip){
-            $exist = DB::table('shetabit_visits')->where('ip',$ip)->first();
-            if(empty($exist)){
-                $request->visitor()->visit(); 
+        if ($ip) {
+            $exist = DB::table('shetabit_visits')->where('ip', $ip)->first();
+            if (empty($exist)) {
+                $request->visitor()->visit();
             }
         }
-       
-        return view('front.index',compact('countVisitor'));
-    
-      /*   $countVisitor = 0; 
+
+        return view('front.index', compact('countVisitor'));
+
+        /*   $countVisitor = 0; 
         $countVisitor = visitor()->visitLogs()->distinct('ip')->count('ip'); */
-      /*   if(!empty(Auth::user())){
+        /*   if(!empty(Auth::user())){
             visitor()->visit($user);
             $countVisitor = visitor()->visit(Auth::user()); 
         }
              */
-    
     }
     public function about()
     {
@@ -53,7 +52,12 @@ class FrontController extends Controller
     {
         return view('front.contact');
     }
-    public function logout(Request $request) {
+    public function texiservices()
+    {
+        return view('front.texiservice');
+    }
+    public function logout(Request $request)
+    {
         Auth::logout();
         return redirect('/login');
     }

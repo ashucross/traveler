@@ -34,6 +34,7 @@ Route::get('package', [FrontController::class, 'package']);
 Route::get('blog', [FrontController::class, 'blog']);
 Route::get('testimonial', [FrontController::class, 'testimonial']);
 Route::get('contact', [FrontController::class, 'contact']);
+Route::get('texi_service', [FrontController::class, 'texiservices']);
 
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
