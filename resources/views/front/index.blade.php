@@ -5,11 +5,11 @@
 
 <div class="count_cover">
 
-<div class="numberCircle">
-    <h5 class="text-center mt-2 resize_count">Visitor's</h5>
-   
-    <h5 class="text-center resize_count">{{ $countVisitor ?? 0 }}</h5>
-</div>
+    <div class="numberCircle">
+        <h5 class="text-center mt-2 resize_count">Visitor's</h5>
+
+        <h5 class="text-center resize_count">{{ $countVisitor ?? 0 }}</h5>
+    </div>
 </div>
 <div class="hero-section">
     <div class="container">
@@ -18,10 +18,10 @@
                 <div class="hero-section-caption pinside40">
                     <div class="row">
                         <div class="col-md-12 mb-1">
-                             <button class="googlebtn_wrap p-2 mt-3"> <a href="{{ url('auth/google') }}" class="googlebtn">
-                                <i class="fa fa-google" aria-hidden="true"></i> Get enquiry by google
-                                </a> 
-                            </button> 
+                            <button class="googlebtn_wrap p-2 mt-3 d-block mx-auto"> <a href="{{ url('auth/google') }}" class="googlebtn">
+                                    <i class="fa fa-google" aria-hidden="true"></i> Get enquiry by google
+                                </a>
+                            </button>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <i class="fa fa-phone text-center d-block phoneicon"></i>
@@ -35,9 +35,9 @@
                     <div class="row">
                         <div class="col-md-12 mt-1">
                             @if(Session::has('msg'))
-                                <p class="alert alert-success">{{ Session::get('msg') }}</p>
+                            <p class="alert alert-success">{{ Session::get('msg') }}</p>
                             @endif
-                        </div> 
+                        </div>
                     </div>
 
 
@@ -45,7 +45,7 @@
             </div>
 
             <div class="wrapsign">
-               
+
             </div>
             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                 <div class="booking-form mt-5 mb-5">
@@ -105,7 +105,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">SPECIAL HIMACHAL HONEYMOON TOUR</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/multi6.jpg')}}" alt="Card image cap">
@@ -116,7 +116,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">TRANQUIL HIMACHAL TOUR</h4>
-                                
+
                                 </div>
                                 <div class="card mb-2">
 
@@ -128,7 +128,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">ENCHANTING KASOL TOUR</h4>
-                            
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/multi4.jpg')}}" alt="Card image cap">
@@ -147,7 +147,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MANALI COUPLE TOUR</h4>
-                                    
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/manalicouple.jpg')}}" alt="Card image cap">
@@ -158,7 +158,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MANALI KHEERGANGA TOUR</h4>
-                                
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/dal.jpg')}}" alt="Card image cap">
@@ -169,7 +169,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MYSTERIOUS BEAS KUND TREK</h4>
-                                  
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel6.jpg')}}" alt="Card image cap">
@@ -188,7 +188,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">WEEKEND SPECIAL DALHOUSIE</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel7.jpg')}}" alt="Card image cap">
@@ -199,7 +199,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">EXOTIC HIMACHAL JEEP TOUR</h4>
-                                    
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/slider1.jpg')}}" alt="Card image cap">
@@ -210,7 +210,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">HONEYMOON VACATIONS BY VOLVO</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel6.jpg')}}" alt="Card image cap">
@@ -267,7 +267,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">SPECIAL HIMACHAL HONEYMOON TOUR</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/multi6.jpg')}}" alt="Card image cap">
@@ -278,7 +278,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">TRANQUIL HIMACHAL TOUR</h4>
-                                
+
                                 </div>
                                 <div class="card mb-2">
 
@@ -290,7 +290,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">ENCHANTING KASOL TOUR</h4>
-                            
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/multi4.jpg')}}" alt="Card image cap">
@@ -309,7 +309,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MANALI COUPLE TOUR</h4>
-                                    
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/manalicouple.jpg')}}" alt="Card image cap">
@@ -320,7 +320,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MANALI KHEERGANGA TOUR</h4>
-                                
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/dal.jpg')}}" alt="Card image cap">
@@ -331,7 +331,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">MYSTERIOUS BEAS KUND TREK</h4>
-                                  
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel6.jpg')}}" alt="Card image cap">
@@ -350,7 +350,7 @@
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">WEEKEND SPECIAL DALHOUSIE</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel7.jpg')}}" alt="Card image cap">
@@ -361,7 +361,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">EXOTIC HIMACHAL JEEP TOUR</h4>
-                                    
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/slider1.jpg')}}" alt="Card image cap">
@@ -372,7 +372,7 @@
                             <div class="col-md-4 clearfix d-none d-md-block">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">HONEYMOON VACATIONS BY VOLVO</h4>
-                                   
+
                                 </div>
                                 <div class="card mb-2">
                                     <img class="card-img-top slider_main" src="{{asset('template/images/travel6.jpg')}}" alt="Card image cap">
@@ -439,7 +439,174 @@
     </div>
 </div>
 <!-- about-section close -->
+
+<!-- texi service start -->
+
+<div class="spaceslide2 bg-inf">
+    <div class="container-fluid">
+        <h1 class="whyhead2 mb-5 text-center">Texi Services</h1>
+        <!--Controls-->
+        <div class="controls-top">
+            <a class="btn-floating float-left margin_rightarr custom_control2" href="#Carslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="btn-floating float-right margin_leftarr custom_control2" href="#Carslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!-- about-section start -->
+        <div class="container">
+            <!--Carousel Wrapper-->
+            <div id="Carslider" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+
+
+
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#Carslider" data-slide-to="0" class="active"></li>
+                    <li data-target="#Carslider" data-slide-to="1"></li>
+                    <li data-target="#Carslider" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">SUV Cars</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi1.jpg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Honda Crv</h4>
+
+                                </div>
+                                <div class="card mb-2">
+
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi6.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Cidan Class</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi2.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Hatch Back</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi5.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Suv</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/texi4.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Thar</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/thar.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Second slide-->
+
+                    <!--Third slide-->
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Traveller</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/traveler.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Baleno</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/baleno.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform">Scorpio</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <img class="card-img-top slider_main3" src="{{asset('template/images/scorpio.jpeg')}}" alt="Card image cap">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.Third slide-->
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+
+        </div>
+    </div>
+</div>
+
+<!-- texi service ends -->
 <!-- Destination-section-start -->
+
 <div class="space-medium">
     <div class="container">
         <div class="row">

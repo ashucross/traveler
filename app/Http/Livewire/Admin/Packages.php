@@ -16,7 +16,7 @@ class Packages extends Component
     public $category_id, $destination_id, $package_id, $packagename, $duration, $days, $itenary, $rates, $file;
     public function render()
     {
-        $this->packages = Package::all();
+        $this->packages = Package::with('Destination', 'Category')->get();
 
         $this->categories = Category::all();
         $this->destinations = Destination::all();

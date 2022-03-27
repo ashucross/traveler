@@ -119,7 +119,7 @@
                         {{ $loop->iteration }}
                     </td>
                     <td>{{ $package->destination_id}}</td>
-                    <td>{{ $package->category_id}}</td>
+                    <td>{{ $package->name}}</td>
                     <td>{{ $package->packagename}}</td>
                     <td>{{ $package->duration}}</td>
                     <td>{{ $package->days}}</td>

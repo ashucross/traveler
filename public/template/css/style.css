@@ -94,6 +94,11 @@ h1.whyhead {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
+    height: 50px;
+}
+
+.slider_main3 {
+    height: 250px;
 }
 
 .pack_img {
