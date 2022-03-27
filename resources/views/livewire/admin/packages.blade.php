@@ -90,7 +90,7 @@
     </div>
 
     <div class="container">
-        <h2 class="text-center mb-5">Destination Table</h2>
+        <h2 class="text-center mb-5">Package Table</h2>
         @if (session()->has('message'))
         <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif

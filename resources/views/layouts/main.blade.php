@@ -70,8 +70,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
     })
 
     window.addEventListener('hide-desform', event => {
-      console.log('hide wala');
+
       $('#desForm').modal('hide');
+    })
+
+    window.addEventListener('show-catform', event => {
+
+      $('#catForm').modal('show');
+    })
+
+    window.addEventListener('hide-catform', event => {
+
+      $('#desForm').modal('hide');
+    })
+
+
+    window.addEventListener('show-packform', event => {
+
+      $('#packForm').modal('show');
+    })
+
+    window.addEventListener('hide-packform', event => {
+
+      $('#packForm').modal('hide');
+    })
+
+
+    window.addEventListener('show-texiform', event => {
+
+      $('#texiForm').modal('show');
+    })
+
+    window.addEventListener('hide-texiform', event => {
+
+      $('#texiForm').modal('hide');
     })
   </script>
 </body>

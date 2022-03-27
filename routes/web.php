@@ -8,6 +8,7 @@ use App\Http\Livewire\Admin\DestinationList;
 
 use App\Http\Livewire\Admin\Categories;
 use App\Http\Livewire\Admin\Packages;
+use App\Http\Livewire\Admin\TexiServices;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,7 @@ Route::get('home', [DashboardController::class, 'index']);
 Route::get('admin/destinations', DestinationList::class);
 Route::get('admin/categories', Categories::class);
 Route::get('admin/packages', Packages::class);
+Route::get('admin/texiservice', TexiServices::class);
 /* Route::middleware(['auth:sanctum', 'verified'])->get('fake/dashboard', function () {
     return view('fake.dashboard');
 })->name('dashboard'); */
