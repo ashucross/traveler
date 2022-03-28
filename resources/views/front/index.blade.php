@@ -605,6 +605,131 @@
 </div>
 
 <!-- texi service ends -->
+
+<!-- hotel reservation -->
+<div class="spaceslide2 bg-info">
+    <div class="container-fluid">
+        <h1 class="whyhead2 mb-5 text-center">Hotels And Resorts</h1>
+        <!--Controls-->
+        <div class="controls-top">
+            <a class="btn-floating float-left margin_rightarr custom_control2" href="#hotelslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="btn-floating float-right margin_leftarr custom_control2" href="#hotelslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+        </div>
+        <!-- about-section start -->
+        <div class="container">
+            <!--Carousel Wrapper-->
+            <div id="hotelslider" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+
+
+
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#hotelslider" data-slide-to="0" class="active"></li>
+                    <li data-target="#hotelslider" data-slide-to="1"></li>
+                    <li data-target="#hotelslider" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform2">Oberoies Wild Flower Hall</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel1.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform2">Taj Resort And Spa Shimla</h4>
+
+                                </div>
+                                <div class="card mb-2">
+
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel2.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform2">Obroi Cicil Shimla</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel3.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--/.First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform2">Snow Valley Resorts Shimla</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel4.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding2">
+                                    <h4 class="card-title text_sizeform2">Welcomhotel By ITC Hotels, Shimla
+                                    </h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel5.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 clearfix d-none d-md-block">
+                                <div class="card-body box_sliding">
+                                    <h4 class="card-title text_sizeform2">Hotel Golf Links Shimla</h4>
+
+                                </div>
+                                <div class="card mb-2">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel6.jpeg')}}" alt="Card image cap"></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+
+        </div>
+    </div>
+</div>
+
+<!-- hotel ends -->
+
+
 <!-- Destination-section-start -->
 
 <div class="space-medium">
