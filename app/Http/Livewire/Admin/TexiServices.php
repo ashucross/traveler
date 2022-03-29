@@ -21,7 +21,6 @@ class TexiServices extends Component
     public function addNewTexi()
     {
         $this->dispatchBrowserEvent('show-texiform');
-        $this->texiForm->reset();
     }
 
     public function storeTexi()

@@ -2264,9 +2264,12 @@ a.xolor {
         width: 100px;
     }
 
+
+
     .phonetext {
         width: 100px;
     }
+
 
 
     .custom_control {
@@ -2321,6 +2324,30 @@ a.xolor {
 
     .ham {
         display: block;
+    }
+
+    img.tex_img {
+        height: auto;
+        width: 100%;
+        object-fit: fill;
+        margin: 0 !important;
+    }
+
+    .texi_model {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .btn_texi {
+        display: block;
+
+        margin-left: 20px;
+    }
+
+    p.rating_texi {
+        display: block;
+        text-align: center;
+        margin-bottom: 25px;
     }
 
     #navigation {
@@ -2385,6 +2412,12 @@ a.xolor {
     .space-medium {
         padding-top: 25px;
         padding-bottom: 0px;
+    }
+
+    .btn_texi {
+        display: block;
+        float: none !important;
+        width: 75%;
     }
 
     .section-title {

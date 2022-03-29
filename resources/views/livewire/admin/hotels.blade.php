@@ -1,17 +1,17 @@
 <div>
 
     <!-- Button trigger modal -->
-    <button wire:click.prevent="addNewHotel" type="button" class="btn btn-info float-right mr-5 mt-5 mb-3 py-2" data-toggle="modal" data-target="#texiForm">
-        Add Texi
+    <button wire:click.prevent="addNewHotel" type="button" class="btn btn-info float-right mr-5 mt-5 mb-3 py-2" data-toggle="modal" data-target="#hotelForm">
+        Add Hotel
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="texiForm" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" wire:ignore.self>
+    <div class="modal fade" id="hotelForm" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog" role="document">
             <form wire:submit.prevent="storeHotel" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Destination</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Hotels And Resorts</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -21,20 +21,20 @@
 
 
 
-                        <input type="text" class="form-control" wire:model.defer="model" name="model" id="model" placeholder="Texi Model">
-                        @error('model') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <input type="text" class="form-control" wire:model.defer="hotel" name="hotel" id="hotel" placeholder="Hotel Name">
+                        @error('hotel') <span class="text-red-500">{{ $message }}</span>@enderror
 
-                        <input type="text" class="form-control" wire:model.defer="drivername" name="drivername" id="name" placeholder="Driver Name">
-                        @error('drivername') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <input type="text" class="form-control" wire:model.defer="location" name="location" id="location" placeholder="Location">
+                        @error('location') <span class="text-red-500">{{ $message }}</span>@enderror
 
-                        <input type="text" class="form-control" wire:model.defer="texinumber" name="texinumber" id="texinumber" placeholder="Texi Number">
-                        @error('texinumber') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <input type="text" class="form-control" wire:model.defer="discription" name="discription" id="discription" placeholder="Enter Discription">
+                        @error('discription') <span class="text-red-500">{{ $message }}</span>@enderror
 
-                        <input type="number" class="form-control" wire:model.defer="drivernumber" name="drivernumber" id="drivernumber" placeholder="Driver Number (Optional)">
-                        @error('drivernumber') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <input type="number" class="form-control" wire:model.defer="price" name="price" id="price" placeholder="Price Per Day">
+                        @error('price') <span class="text-red-500">{{ $message }}</span>@enderror
 
-                        <input type="number" class="form-control" wire:model.defer="rates" name="rates" id="rates" placeholder="Rates Per Hour">
-                        @error('rates') <span class="text-red-500">{{ $message }}</span>@enderror
+                        <input type="number" class="form-control" wire:model.defer="contact" name="contact" id="contact" placeholder="Contact Number (Optional)">
+                        @error('contact') <span class="text-red-500">{{ $message }}</span>@enderror
 
 
 
@@ -60,7 +60,7 @@
     </div>
 
     <div class="container">
-        <h2 class="text-center mb-5">Texi Service Table</h2>
+        <h2 class="text-center mb-5">Hotel Table</h2>
         @if (session()->has('message'))
         <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif

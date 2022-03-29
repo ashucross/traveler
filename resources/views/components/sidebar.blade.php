@@ -59,6 +59,14 @@
           </a>
         </li>
         <li class="nav-item menu-open">
+          <a href="{{url('admin/hotels')}}" class="nav-link active">
+            <i class="nav-icon fas fa-hotel"></i>
+            <p>
+              Hotels
+            </p>
+          </a>
+        </li>
+        <li class="nav-item menu-open">
           <a href="{{url('admin/visitors')}}" class="nav-link active">
             <i class="nav-icon fas fa-users"></i>
             <p>

@@ -17,6 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('backend/dist/css/adminlte.min.css')}}">
   <link rel="stylesheet" href="{{asset('template/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('template/css/small.css')}}">
   @livewireStyles
 </head>
 
@@ -104,6 +105,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     window.addEventListener('hide-texiform', event => {
 
       $('#texiForm').modal('hide');
+    })
+
+    window.addEventListener('show-hotelform', event => {
+
+      $('#hotelForm').modal('show');
+    })
+
+    window.addEventListener('hide-hotelform', event => {
+
+      $('#hotelForm').modal('hide');
     })
   </script>
 </body>

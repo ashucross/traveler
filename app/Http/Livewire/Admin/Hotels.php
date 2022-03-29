@@ -10,7 +10,7 @@ class Hotels extends Component
 {
 
     use WithFileUploads;
-    public $hotel_id, $hotel, $location, $description, $rates, $image;
+    public $hotel_id, $hotel, $location, $discription, $price, $image;
 
     public function render()
     {
@@ -22,7 +22,6 @@ class Hotels extends Component
     public function addNewHotel()
     {
         $this->dispatchBrowserEvent('show-hotelform');
-        $this->hotelForm->reset();
     }
 
     public function storeHotel()
@@ -33,8 +32,8 @@ class Hotels extends Component
             'hotel' => 'required|min:3',
             'location' => 'required|min:3',
             'discription' => 'required|min:20',
-    
-            'rates' => 'required|min:3',
+
+            'price' => 'required|min:3',
             'image' => '',
         ]);
         $Imagename = $this->image->store('hotel', 'public');
@@ -44,8 +43,8 @@ class Hotels extends Component
             'hotel' => $this->hotel,
             'location' => $this->location,
             'discription' => $this->discription,
-            
-            'rates' => $this->rates,
+
+            'price' => $this->price,
             'image' => $Imagename,
 
         ]);
@@ -60,8 +59,8 @@ class Hotels extends Component
         $this->hotel = $hotels->hotel;
         $this->location = $hotels->location;
         $this->discription = $hotels->discription;
-        $this->rates = $hotels->rates;
-       
+        $this->price = $hotels->price;
+
 
         $this->image = $hotels->image;
     }
