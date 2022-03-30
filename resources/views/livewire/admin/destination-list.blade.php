@@ -25,7 +25,7 @@
                         @error('name') <span class="text-red-500">{{ $message }}</span>@enderror
 
 
-                        
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,15 +39,15 @@
 
 
     <div class="container-fluid">
-     
+
     </div>
 
     <div class="container">
         <h2 class="text-center mb-5">Destination Table</h2>
         @if (session()->has('message'))
-            <h5 class="text-danger text-center">{{ session('message') }}</h5>
+        <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif
-        
+
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -57,20 +57,20 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($destinations as $destination)
+                @foreach($destinations as $destination)
                 <tr>
                     <td>
                         {{ $loop->iteration }}
                     </td>
                     <td>{{ $destination->name}}</td>
                     <td>
-                        <button wire:click="editDestination({{ $destination->id }})" class="btn-info" data-toggle="modal" data-target="#desForm">Edit</button>
-                        <button wire:click="deleteDestination({{ $destination->id }})" class="btn-danger">delete</button>
+                        <button wire:click="editDestination({{ $destination->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#desForm">Edit</button>
+                        <button wire:click="deleteDestination({{ $destination->id }})" class="btn-danger btn_opt">delete</button>
                     </td>
-                    
+
                 </tr>
                 @endforeach
-               
+
             </tbody>
         </table>
     </div>

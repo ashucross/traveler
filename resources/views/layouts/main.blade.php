@@ -65,6 +65,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   @livewireScripts
 
   <script>
+    /* =========destination form ================= */
     window.addEventListener('show-desform', event => {
 
       $('#desForm').modal('show');
@@ -75,6 +76,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('#desForm').modal('hide');
     })
 
+
+    /* ======================= category form =================*/
     window.addEventListener('show-catform', event => {
 
       $('#catForm').modal('show');
@@ -82,10 +85,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     window.addEventListener('hide-catform', event => {
 
-      $('#desForm').modal('hide');
+      $('#catForm').modal('hide');
     })
 
-
+    /* ==============packages form =============== */
     window.addEventListener('show-packform', event => {
 
       $('#packForm').modal('show');
@@ -96,7 +99,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       $('#packForm').modal('hide');
     })
 
-
+    /* ================== texi form ================ */
     window.addEventListener('show-texiform', event => {
 
       $('#texiForm').modal('show');
@@ -106,7 +109,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       $('#texiForm').modal('hide');
     })
-
+    /* ============ hotel forms ================*/
     window.addEventListener('show-hotelform', event => {
 
       $('#hotelForm').modal('show');

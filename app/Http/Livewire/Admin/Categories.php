@@ -38,6 +38,7 @@ class Categories extends Component
             'name' => $this->name,
 
         ]);
+        $this->name = "";
         session()->flash('message', $this->category_id ? 'Category Updated' : 'Category Created');
         $this->dispatchBrowserEvent('hide-catform');
     }

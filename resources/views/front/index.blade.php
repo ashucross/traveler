@@ -75,13 +75,13 @@
         <h1 class="whyhead mb-5 text-center">Himachal Tours</h1>
         <!--Controls-->
         <div class="controls-top">
-            <a class="btn-floating float-left margin_rightarr custom_control" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-            <a class="btn-floating float-right margin_leftarr custom_control" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+            <a class="btn-floating float-left margin_rightarr custom_control" href="#destin" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="btn-floating float-right margin_leftarr custom_control" href="#destin" data-slide="next"><i class="fa fa-chevron-right"></i></a>
         </div>
         <!-- about-section start -->
         <div class="container">
             <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+            <div id="destin" class="carousel slide carousel-multi-item" data-ride="carousel">
 
 
 

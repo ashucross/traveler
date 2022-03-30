@@ -92,10 +92,10 @@
                     <td>{{ $texi->drivernumber}}</td>
                     <td>{{ $texi->rates}}</td>
 
-                    <td><img src="{{ asset('storage/'.$texi->image) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ asset('storage/'.$texi->image) }}" class="pack_img" /></td>
                     <td>
-                        <button wire:click="editTexi({{ $texi->id }})" class="btn-info" data-toggle="modal" data-target="#texiForm">Edit</button>
-                        <button wire:click="deleteTexi({{ $texi->id }})" class="btn-danger">delete</button>
+                        <button wire:click="editTexi({{ $texi->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#texiForm">Edit</button>
+                        <button wire:click="deleteTexi({{ $texi->id }})" class="btn-danger btn_opt">delete</button>
                     </td>
 
                 </tr>

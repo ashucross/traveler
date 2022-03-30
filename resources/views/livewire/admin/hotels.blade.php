@@ -91,10 +91,10 @@
 
                     <td>{{ $hotel->rates}}</td>
 
-                    <td><img src="{{ asset('storage/'.$hotel->image) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ asset('storage/'.$hotel->image) }}" class="pack_img" /></td>
                     <td>
-                        <button wire:click="editHotel({{ $hotel->id }})" class="btn-info" data-toggle="modal" data-target="#hotelForm">Edit</button>
-                        <button wire:click="deleteHotel({{ $hotel->id }})" class="btn-danger">delete</button>
+                        <button wire:click="editHotel({{ $hotel->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#hotelForm">Edit</button>
+                        <button wire:click="deleteHotel({{ $hotel->id }})" class="btn-danger btn_opt">delete</button>
                     </td>
 
                 </tr>

@@ -125,10 +125,10 @@
                     <td>{{ $package->days}}</td>
                     <td>{{ $package->itenary}}</td>
                     <td>{{ $package->rates}}</td>
-                    <td><img src="{{ asset('storage/'.$package->image_id) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ asset('storage/'.$package->image_id) }}" class="pack_img" /></td>
                     <td>
-                        <button wire:click="editPackage({{ $package->id }})" class="btn-info" data-toggle="modal" data-target="#packForm">Edit</button>
-                        <button wire:click="deletePackage({{ $package->id }})" class="btn-danger">delete</button>
+                        <button wire:click="editPackage({{ $package->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#packForm">Edit</button>
+                        <button wire:click="deletePackage({{ $package->id }})" class="btn-danger btn_opt">delete</button>
                     </td>
 
                 </tr>

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\Admin\Packages;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Package;
+use App\Models\Texi;
+use App\Models\Hotel;
 use DB;
 use Auth;
 
@@ -13,6 +17,10 @@ class FrontController extends Controller
     //
     public function index(Request $request)
     {
+        $packages = Package::with('Destination', 'Category')->get();
+        $texis = Texi::all();
+        $hotels = Hotel::all();
+
         $countVisitor = DB::table('shetabit_visits')->count();
         $ip = $request->ip();
         if ($ip) {
@@ -22,15 +30,7 @@ class FrontController extends Controller
             }
         }
 
-        return view('front.index', compact('countVisitor'));
-
-        /*   $countVisitor = 0; 
-        $countVisitor = visitor()->visitLogs()->distinct('ip')->count('ip'); */
-        /*   if(!empty(Auth::user())){
-            visitor()->visit($user);
-            $countVisitor = visitor()->visit(Auth::user()); 
-        }
-             */
+        return view('front.index', compact('countVisitor', 'packages', 'texis', 'hotels'));
     }
     public function about()
     {
@@ -52,10 +52,18 @@ class FrontController extends Controller
     {
         return view('front.contact');
     }
+
     public function texiservices()
     {
         return view('front.texiservice');
     }
+
+
+    public function hotels()
+    {
+        return view('front.hotelfront');
+    }
+
     public function logout(Request $request)
     {
         Auth::logout();
