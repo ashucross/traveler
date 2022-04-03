@@ -35,24 +35,24 @@
                                    @if ( Auth::user())
 
 
-                                   <li><a href="/home" title="Contact Us">Dashboard</a> </li>
-                                   <li class="active"><a href="/" title="Home">Home</a></li>
-                                   <li class=""><a href="/package" title="Tours">Tours</a>
-                                   <li class=""><a href="/texi_service" title="Texi">Texi Services</a>
-                                   <li class=""><a href="/hotel_resorts" title="Hotel">Hotels</a>
+                                   <li><a href="{{url('/home')}}" title="Contact Us">Dashboard</a> </li>
+                                   <li class="active"><a href="{{url('/')}}" title="Home">Home</a></li>
+                                   <li class=""><a href="{{url('/package')}}" title="Tours">Tours</a>
+                                   <li class=""><a href="{{url('/texi_service')}}" title="Texi">Texi Services</a>
+                                   <li class=""><a href="{{url('/hotel_resorts')}}" title="Hotel">Hotels</a>
                                        @else
-                                   <li class="active"><a href="/" title="Home">Home</a></li>
-                                   <li><a href="/about" title="About us">About us</a> </li>
-                                   <li class=""><a href="/package" title="Tours">Tours</a>
+                                   <li class="active"><a href="{{url('/')}}" title="Home">Home</a></li>
+                                   <li><a href="{{url('/about')}}" title="About us">About us</a> </li>
+                                   <li class=""><a href="{{url('/package')}}" title="Tours">Tours</a>
 
                                    </li>
-                                   <li class=""><a href="/texi_service" title="Texi">Texi Services</a>
-                                   <li class=""><a href="/hotel_resorts" title="Hotel">Hotels</a>
-                                   <li class=""><a href="/blog" title="Blog ">Blog</a>
+                                   <li class=""><a href="{{url('/texi_service')}}" title="Texi">Texi Services</a>
+                                   <li class=""><a href="{{url('/hotel_resorts')}}" title="Hotel">Hotels</a>
+                                   <li class=""><a href="{{url('/blog')}}" title="Blog ">Blog</a>
 
                                    </li>
-                                   <li><a href="/testimonial" title="Testimonials">Testimonials</a>
-                                   <li><a href="/contact" title="Contact Us">Contact Us</a> </li>
+                                   <li><a href="{{url('/testimonial')}}" title="Testimonials">Testimonials</a>
+                                   <li><a href="{{url('/contact')}}" title="Contact Us">Contact Us</a> </li>
                                    @endif
 
 
