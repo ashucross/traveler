@@ -48,7 +48,7 @@
         <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif
 
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th>Count</th>

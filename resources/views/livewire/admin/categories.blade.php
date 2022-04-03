@@ -25,14 +25,14 @@
 
                             @foreach($destinations as $destination)
                             <option value="{{$destination->id}}">{{$destination->name}}</option>
-
-                            <option>
+                            
                                 @endforeach
 
                                 @else
-                                <?= 'table is empty' ?>
+                                <option>
+                                <?= 'table is empty' ?>  </option>  
                                 @endif
-                            </option>
+                          
 
 
 

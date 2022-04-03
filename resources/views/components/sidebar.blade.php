@@ -66,7 +66,7 @@
             </p>
           </a>
         </li>
-        <li class="nav-item menu-open">
+       <!--  <li class="nav-item menu-open">
           <a href="{{url('admin/visitors')}}" class="nav-link active">
             <i class="nav-icon fas fa-users"></i>
             <p>
@@ -81,7 +81,7 @@
               Enquiries
             </p>
           </a>
-        </li>
+        </li> -->
 
 
         <li class="nav-item menu-open">

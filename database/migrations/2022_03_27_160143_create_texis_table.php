@@ -21,6 +21,7 @@ class CreateTexisTable extends Migration
             $table->string('drivernumber')->nullable();
             $table->string('rates');
             $table->string('image');
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }

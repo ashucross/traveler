@@ -13,11 +13,16 @@ use Livewire\WithFileUploads;
 class Packages extends Component
 {
     use WithFileUploads;
-    public $category_id, $destination_id, $package_id, $packagename, $duration, $days, $itenary, $rates, $file;
+    public $category_id, $categories, $destinations, $packages,$status, $destination_id,$image_id, $package_id, $packagename, $duration, $itenary, $rates, $file;
     public function render()
     {
-        $this->packages = Package::with('Destination', 'Category')->get();
-
+        $packages = Package::with('Destination')->get();
+        if(!empty($packages)){
+            foreach($packages as $package){
+                $package->category = Category::where('id',$package->category_id)->first();
+            }
+        }
+        $this->packages = $packages; 
         $this->categories = Category::all();
         $this->destinations = Destination::all();
 
@@ -27,6 +32,7 @@ class Packages extends Component
 
     public function addNewPack()
     {
+        $this->reset();
         $this->dispatchBrowserEvent('show-packform');
     }
 
@@ -38,10 +44,11 @@ class Packages extends Component
             'category_id' => 'required',
             'packagename' => 'required|min:3',
             'duration' => 'required',
-            'days' => 'required',
+            
             'itenary' => 'required',
             'rates' => 'required',
             'file' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
         ]);
 
         $Filename = $this->file->store('files', 'public');
@@ -50,13 +57,14 @@ class Packages extends Component
 
         Package::updateOrCreate(['id' => $this->package_id], [
             'destination_id' => $this->destination_id,
-            'category_id' => $this->destination_id,
+            'category_id' => $this->category_id,
             'packagename' => $this->packagename,
             'duration' => $this->duration,
-            'days' => $this->days,
+          
             'itenary' => $this->itenary,
             'rates' => $this->rates,
             'image_id' => $Filename,
+            'status' => $this->status,
 
         ]);
         session()->flash('message', $this->package_id ? 'Package Updated' : 'Package Created');
@@ -71,9 +79,9 @@ class Packages extends Component
         $this->category_id = $packages->category_id;
         $this->packagename = $packages->packagename;
         $this->duration = $packages->duration;
-        $this->days = $packages->days;
         $this->itenary = $packages->itenary;
         $this->rates = $packages->rates;
+        $this->status = $packages->status;
         $this->image_id = $packages->image_id;
     }
 

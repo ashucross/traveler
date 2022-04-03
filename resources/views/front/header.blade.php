@@ -38,14 +38,16 @@
                                    <li><a href="/home" title="Contact Us">Dashboard</a> </li>
                                    <li class="active"><a href="/" title="Home">Home</a></li>
                                    <li class=""><a href="/package" title="Tours">Tours</a>
-                                   <li class=""><a href="/texi_service" title="Tours">Texi Services</a>
-                                   <li class=""><a href="/hotel_resorts" title="Tours">Hotels</a>
+                                   <li class=""><a href="/texi_service" title="Texi">Texi Services</a>
+                                   <li class=""><a href="/hotel_resorts" title="Hotel">Hotels</a>
                                        @else
                                    <li class="active"><a href="/" title="Home">Home</a></li>
                                    <li><a href="/about" title="About us">About us</a> </li>
                                    <li class=""><a href="/package" title="Tours">Tours</a>
 
                                    </li>
+                                   <li class=""><a href="/texi_service" title="Texi">Texi Services</a>
+                                   <li class=""><a href="/hotel_resorts" title="Hotel">Hotels</a>
                                    <li class=""><a href="/blog" title="Blog ">Blog</a>
 
                                    </li>
@@ -79,6 +81,8 @@
                <li class="my-3"><a href="/" class="hamlink">Home</a></li>
                <li class="my-3"><a href="/about" class="hamlink">About Us</a></li>
                <li class="my-3"><a href="/package" class="hamlink">Package</a></li>
+               <li class="my-3"><a href="/texi_service"  class="hamlink" >Texi Services</a>
+               <li class="my-3"><a href="/hotel_resorts"  class="hamlink">Hotels</a>
                <li class="my-3"><a href="/blog" class="hamlink">Blog</a></li>
                <li class="my-3"><a href="/testimonial" class="hamlink">Testimonial</a></li>
                <li class="my-3"><a href="/contact" class="hamlink">Contact Us</a></li>

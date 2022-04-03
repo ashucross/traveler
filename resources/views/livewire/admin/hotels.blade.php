@@ -65,7 +65,7 @@
         <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif
 
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th>Count</th>
@@ -87,9 +87,9 @@
                     </td>
                     <td>{{ $hotel->hotel}}</td>
                     <td>{{ $hotel->location}}</td>
-                    <td>{{ $hotel->discription}}</td>
+                    <td>{{Str::limit($hotel->discription, 100, $end='...')}}</td>
 
-                    <td>{{ $hotel->rates}}</td>
+                    <td>{{ $hotel->price}}</td>
 
                     <td style="width:150px;"><img src="{{ asset('storage/'.$hotel->image) }}" class="pack_img" /></td>
                     <td>

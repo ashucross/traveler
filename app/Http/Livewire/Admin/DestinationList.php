@@ -36,6 +36,7 @@ class DestinationList extends Component
 
         ]);
         session()->flash('message', $this->destination_id ? 'Destination Updated' : 'Destination Created');
+        $this->reset(); 
         $this->dispatchBrowserEvent('hide-desform');
     }
 

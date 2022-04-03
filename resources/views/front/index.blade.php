@@ -62,7 +62,7 @@
 
                         <div class="form-group"> <input class="form-control" type="tel" placeholder="Enter you Phone"> <span class="form-label">Phone</span> </div>
 
-                        <div class="form-btn"> <button class="mb-5 submit-btn"><a href="/package" class="text-white">Get Call</a></button> </div>
+                        <div class="form-btn"> <button class="mb-5 submit-btn" disabled><a href="/package" class="text-white">Get Call</a></button> </div>
                     </form>
                 </div>
             </div>
@@ -89,9 +89,9 @@
 
                 <!--Indicators-->
                 <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
+                    <li data-target="#destin" data-slide-to="0" class="active"></li>
+                    <li data-target="#destin" data-slide-to="1"></li>
+                    <li data-target="#destin" data-slide-to="2"></li>
                 </ol>
                 <!--/.Indicators-->
 
@@ -99,49 +99,32 @@
                 <div class="carousel-inner" role="listbox">
 
                     <!--First slide-->
-                    <div class="carousel-item active">
-
+                    @if(!empty($singleArr3))
+                    @foreach ($singleArr3 as $key => $package)
+                    <div class="carousel-item @if($key == 0) active @endif">
                         <div class="row">
+                            @if(!empty($package))
+                            @foreach ($package as $pack)
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">SPECIAL HIMACHAL HONEYMOON TOUR</h4>
-
+                                    <h4 class="card-title text_sizeform">{{$pack->packagename}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <img class="card-img-top slider_main" src="{{asset('template/images/multi6.jpg')}}" alt="Card image cap">
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$pack->image_id) }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">TRANQUIL HIMACHAL TOUR</h4>
-
-                                </div>
-                                <div class="card mb-2">
-
-                                    <img class="card-img-top slider_main" src="{{asset('template/images/extreme.jpg')}}" alt="Card image cap">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">ENCHANTING KASOL TOUR</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <img class="card-img-top slider_main" src="{{asset('template/images/multi4.jpg')}}" alt="Card image cap">
-
-                                </div>
-                            </div>
+                            @endforeach
+                            @endif
                         </div>
-
                     </div>
-                    <!--/.First slide-->
+                    @endforeach
+                    @endif
+                </div>
+                <!--/.First slide-->
 
-                    <!--Second slide-->
-                    <div class="carousel-item">
+                <!--Second slide-->
+                <!--   <div class="carousel-item">
 
                         <div class="row">
                             <div class="col-md-4">
@@ -178,11 +161,11 @@
                             </div>
                         </div>
 
-                    </div>
-                    <!--/.Second slide-->
+                    </div> -->
+                <!--/.Second slide-->
 
-                    <!--Third slide-->
-                    <div class="carousel-item">
+                <!--Third slide-->
+                <!--  <div class="carousel-item">
 
                         <div class="row">
                             <div class="col-md-4">
@@ -219,17 +202,17 @@
                             </div>
                         </div>
 
-                    </div>
-                    <!--/.Third slide-->
-
-                </div>
-                <!--/.Slides-->
+                    </div> -->
+                <!--/.Third slide-->
 
             </div>
-            <!--/.Carousel Wrapper-->
+            <!--/.Slides-->
 
         </div>
+        <!--/.Carousel Wrapper-->
+
     </div>
+</div>
 </div>
 <hr class="my-5">
 <div class="spaceslide2 bg-info">
@@ -264,6 +247,7 @@
                     <div class="carousel-item active">
 
                         <div class="row">
+
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
                                     <h4 class="card-title text_sizeform">SPECIAL HIMACHAL HONEYMOON TOUR</h4>
@@ -471,372 +455,204 @@
                 <div class="carousel-inner" role="listbox">
 
                     <!--First slide-->
-                    <div class="carousel-item active">
-
+                    @if(!empty($singleArr))
+                    @foreach ($singleArr as $key => $texi)
+                    <div class="carousel-item @if($key == 0) active @endif">
                         <div class="row">
+                            @if(!empty($texi))
+                            @foreach ($texi as $tex)
                             <div class="col-md-4">
                                 <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">SUV Cars</h4>
-
+                                    <h4 class="card-title text_sizeform">{{$tex->model}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi1.jpg')}}" alt="Card image cap"></a>
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$tex->image) }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Honda Crv</h4>
-
-                                </div>
-                                <div class="card mb-2">
-
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi6.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Cidan Class</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi2.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
+                            @endforeach
+                            @endif
                         </div>
-
                     </div>
-                    <!--/.First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Hatch Back</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi5.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Suv</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/texi4.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Thar</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/thar.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Second slide-->
-
-                    <!--Third slide-->
-                    <div class="carousel-item">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Traveller</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/traveler.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Baleno</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/baleno.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform">Scorpio</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"> <img class="card-img-top slider_main3" src="{{asset('template/images/scorpio.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.Third slide-->
-
-                </div>
-                <!--/.Slides-->
-
-            </div>
-            <!--/.Carousel Wrapper-->
-
-        </div>
-    </div>
-</div>
-
-<!-- texi service ends -->
-
-<!-- hotel reservation -->
-<div class="spaceslide2 bg-info">
-    <div class="container-fluid">
-        <h1 class="whyhead2 mb-5 text-center">Hotels And Resorts</h1>
-        <!--Controls-->
-        <div class="controls-top">
-            <a class="btn-floating float-left margin_rightarr custom_control2" href="#hotelslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-            <a class="btn-floating float-right margin_leftarr custom_control2" href="#hotelslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-        </div>
-        <!-- about-section start -->
-        <div class="container">
-            <!--Carousel Wrapper-->
-            <div id="hotelslider" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-
-
-
-
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#hotelslider" data-slide-to="0" class="active"></li>
-                    <li data-target="#hotelslider" data-slide-to="1"></li>
-                    <li data-target="#hotelslider" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-
-                    <!--First slide-->
-                    <div class="carousel-item active">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform2">Oberoies Wild Flower Hall</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel1.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform2">Taj Resort And Spa Shimla</h4>
-
-                                </div>
-                                <div class="card mb-2">
-
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel2.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform2">Obroi Cicil Shimla</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel3.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform2">Snow Valley Resorts Shimla</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel4.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding2">
-                                    <h4 class="card-title text_sizeform2">Welcomhotel By ITC Hotels, Shimla
-                                    </h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel5.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 clearfix d-none d-md-block">
-                                <div class="card-body box_sliding">
-                                    <h4 class="card-title text_sizeform2">Hotel Golf Links Shimla</h4>
-
-                                </div>
-                                <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{asset('template/images/hotel6.jpeg')}}" alt="Card image cap"></a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!--/.Slides-->
-
-            </div>
-            <!--/.Carousel Wrapper-->
-
-        </div>
-    </div>
-</div>
-
-<!-- hotel ends -->
-
-
-<!-- Destination-section-start -->
-
-<div class="space-medium">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="section-title text-center">
-                    <h1 class="whyhead">Top Destinations</h1>
+                    @endforeach
+                    @endif
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- destination-one-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img">
-                    <a href="/package" class="imghover"><img src="{{asset('template/images/destination-1.jpg')}}" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
-                </div>
-                <div class="destination-content">
-                    <h3><a href="/package" class="destination-title">Kutub Minar</a></h3>
-                </div>
-            </div>
-            <!-- destination-one-close -->
-            <!-- destination-two-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img imghover">
-                    <a href="/package" class="imghover"><img src="{{asset('template/images/destination-2.jpg')}}" alt="" class="img-responsive"></a>
-                </div>
-                <div class="destination-content">
-                    <h3><a href="/package" class="destination-title">Manali</a></h3>
-                </div>
-            </div>
-            <!-- destination-two-close -->
-            <!-- destination-three-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="destination-img imghover">
-                    <a href="/package"><img src="{{asset('template/images/destination-3.jpg')}}" alt="" class="img-responsive"></a>
-                </div>
-                <div class="destination-content">
-                    <h3><a href="/package" class="destination-title">Rampur</a></h3>
-                </div>
-            </div>
-            <!-- destination-three-close -->
-        </div>
-    </div>
-</div>
-<!-- Destination-section-close -->
-<!-- Testimonials-section start -->
-<div class="bg-default space-medium">
-    <div class="container">
-        <div class="row">
-            <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="section-title text-center">
-                    <h1 class="whyhead">Our Happy Travelers Reviews</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Testimonials-one-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-img"><img src="{{asset('template/images/travel2.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
-                    <div class="testimonial-user-img"><img src="{{asset('template/images/uzer.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
-                    <div class="testimonial-content">
-                        <h4 class="text_review">drsheetal4u@gmail.com</h4>
-                        <span class="location">Solang Valley</span>
-                        <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
-                        <div>
-                            <p class="testimonial-text">“Good team work and knowledge of work and field. They know how to treat a customer. They know how to serve a customer. They treated us as we are their families. So according to me they are best if anyone wants to go on a trip with their friends.... Thanks " </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonials-one-close -->
-            <!-- Testimonials-two-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-img"><img src="{{asset('template/images/travel4.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
-                    <div class="testimonial-user-img"><img src="template/images/uzer.jpg" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
-                    <div class="testimonial-content">
-                        <h4 class="text_review">rahulsharma@gmail.com</h4>
-                        <span class="location">Kullu-manali</span>
-                        <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
-                        <div>
-                            <p class="testimonial-text">“Truly a unique experience with The Himachal Tour. Everything about this team and offerings is absolutely wonderful. The facility, food,hotel,guide,driver surrounding, staff, activities all are one of the best. If you want to have a personalized , peacefu ”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonials-two-start -->
-            <!-- Testimonials-three-start -->
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="testimonial-block">
-                    <div class="testimonial-img"><img src="{{asset('template/images/travel6.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
-                    <div class="testimonial-user-img"><img src="{{asset('template/images/uzer.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
-                    <div class="testimonial-content">
-                        <h4 class="text_review">manisharoy81@gmail.com</h4>
-                        <span class="location">Dharamshala</span>
-                        <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
-                        <div>
-                            <p class="testimonial-text">“It was an awesome pilgrimage tour. Me and my whole family went there. We enjoyed a lot. Arrangements were did very nicely and everything was well managed. I will recommend this to all my knows. We'll visit again soon.”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonials-three-close -->
-        </div>
-    </div>
-</div>
 
-@endsection
+        <!-- texi service ends -->
+
+        <!-- hotel reservation -->
+        <div class="spaceslide2 bg-info">
+            <div class="container-fluid">
+                <h1 class="whyhead2 mb-5 text-center">Hotels And Resorts</h1>
+                <!--Controls-->
+                <div class="controls-top">
+                    <a class="btn-floating float-left margin_rightarr custom_control2" href="#hotelslider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                    <a class="btn-floating float-right margin_leftarr custom_control2" href="#hotelslider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+                <!-- about-section start -->
+                <div class="container">
+                    <!--Carousel Wrapper-->
+                    <div id="hotelslider" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+
+
+
+
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#hotelslider" data-slide-to="0" class="active"></li>
+                            <li data-target="#hotelslider" data-slide-to="1"></li>
+                            <li data-target="#hotelslider" data-slide-to="2"></li>
+                        </ol>
+                        <!--/.Indicators-->
+
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+
+                            <!--First slide-->
+                            @if(!empty($singleArr2))
+                            @foreach ($singleArr2 as $key => $hotel)
+                            <div class="carousel-item @if($key == 0) active @endif">
+                                <div class="row">
+                                    @if(!empty($hotel))
+                                    @foreach ($hotel as $hot)
+                                    <div class="col-md-4">
+                                        <div class="card-body box_sliding">
+                                            <h4 class="card-title text_sizeform">{{$hot->hotel}}</h4>
+                                        </div>
+                                        <div class="card mb-2">
+                                            <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$hot->image) }}" alt="Card image cap"></a>
+
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                            @endforeach
+                            @endif
+                        </div>
+                        <!--/.Slides-->
+
+                    </div>
+                    <!--/.Carousel Wrapper-->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- hotel ends -->
+
+
+        <!-- Destination-section-start -->
+
+        <div class="space-medium">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-title text-center">
+                            <h1 class="whyhead">Top Destinations</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- destination-one-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="destination-img">
+                            <a href="/package" class="imghover"><img src="{{asset('template/images/destination-1.jpg')}}" alt "Tour and Travel Agency - Responsive Website Template" class="img-responsive"></a>
+                        </div>
+                        <div class="destination-content">
+                            <h3><a href="/package" class="destination-title">Kutub Minar</a></h3>
+                        </div>
+                    </div>
+                    <!-- destination-one-close -->
+                    <!-- destination-two-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="destination-img imghover">
+                            <a href="/package" class="imghover"><img src="{{asset('template/images/destination-2.jpg')}}" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="destination-content">
+                            <h3><a href="/package" class="destination-title">Manali</a></h3>
+                        </div>
+                    </div>
+                    <!-- destination-two-close -->
+                    <!-- destination-three-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="destination-img imghover">
+                            <a href="/package"><img src="{{asset('template/images/destination-3.jpg')}}" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="destination-content">
+                            <h3><a href="/package" class="destination-title">Rampur</a></h3>
+                        </div>
+                    </div>
+                    <!-- destination-three-close -->
+                </div>
+            </div>
+        </div>
+        <!-- Destination-section-close -->
+        <!-- Testimonials-section start -->
+        <div class="bg-default space-medium">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-title text-center">
+                            <h1 class="whyhead">Our Happy Travelers Reviews</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Testimonials-one-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-img"><img src="{{asset('template/images/travel2.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
+                            <div class="testimonial-user-img"><img src="{{asset('template/images/uzer.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
+                            <div class="testimonial-content">
+                                <h4 class="text_review">drsheetal4u@gmail.com</h4>
+                                <span class="location">Solang Valley</span>
+                                <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
+                                <div>
+                                    <p class="testimonial-text">“Good team work and knowledge of work and field. They know how to treat a customer. They know how to serve a customer. They treated us as we are their families. So according to me they are best if anyone wants to go on a trip with their friends.... Thanks " </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonials-one-close -->
+                    <!-- Testimonials-two-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-img"><img src="{{asset('template/images/travel4.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
+                            <div class="testimonial-user-img"><img src="template/images/uzer.jpg" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
+                            <div class="testimonial-content">
+                                <h4 class="text_review">rahulsharma@gmail.com</h4>
+                                <span class="location">Kullu-manali</span>
+                                <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
+                                <div>
+                                    <p class="testimonial-text">“Truly a unique experience with The Himachal Tour. Everything about this team and offerings is absolutely wonderful. The facility, food,hotel,guide,driver surrounding, staff, activities all are one of the best. If you want to have a personalized , peacefu ”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonials-two-start -->
+                    <!-- Testimonials-three-start -->
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="testimonial-block">
+                            <div class="testimonial-img"><img src="{{asset('template/images/travel6.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template"></div>
+                            <div class="testimonial-user-img"><img src="{{asset('template/images/uzer.jpg')}}" alt="Tour and Travel Agency - Responsive Website Template" class="img-circle width_test"></div>
+                            <div class="testimonial-content">
+                                <h4 class="text_review">manisharoy81@gmail.com</h4>
+                                <span class="location">Dharamshala</span>
+                                <div class="rating"> <span> <i class="fa fa-star"></i></span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> <span><i class="fa fa-star"></i> </span> </div>
+                                <div>
+                                    <p class="testimonial-text">“It was an awesome pilgrimage tour. Me and my whole family went there. We enjoyed a lot. Arrangements were did very nicely and everything was well managed. I will recommend this to all my knows. We'll visit again soon.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonials-three-close -->
+                </div>
+            </div>
+        </div>
+
+        @endsection

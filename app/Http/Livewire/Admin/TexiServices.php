@@ -45,6 +45,7 @@ class TexiServices extends Component
             'drivernumber' => $this->drivernumber,
             'rates' => $this->rates,
             'image' => $Imagename,
+            'status'=>$this->status,
 
         ]);
         session()->flash('message', $this->texi_id ? 'Texi Updated' : 'Texi Created');
@@ -60,7 +61,7 @@ class TexiServices extends Component
         $this->texinumber = $texis->texinumber;
         $this->drivernumber = $texis->drivernumber;
         $this->rates = $texis->rates;
-
+        $this->status = $texis->status;
         $this->image = $texis->image;
     }
 

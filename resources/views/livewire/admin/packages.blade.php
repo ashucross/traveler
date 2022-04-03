@@ -41,11 +41,15 @@
                         <select wire:model.defer="category_id" class="form-control my-3" id="category_id" name="category_id">
 
                             <option style="display:none;">Please Select Category</option>
+                            @if(!empty($categories))
                             @foreach($categories as $category)
-                            <option value="{{ $category -> id }}">{{ $category -> name}}</option>
+                            <option value="{{ $category->id }}">{{ $category->name}}</option>
 
                             @endforeach
 
+                            @else
+                            <option>No Data Found</option>
+                            @endif
                         </select>
                         @error('category_id') <span class="text-red-500">{{ $message }}</span>@enderror
 
@@ -59,8 +63,7 @@
                         <input type="number" class="form-control my-3" wire:model.defer="rates" name="rates" id="rates" placeholder="Enter Rate">
                         @error('rates') <span class="text-red-500">{{ $message }}</span>@enderror
 
-                        <input type="number" class="form-control my-3" wire:model.defer="days" name="days" id="days" placeholder="Enter Day">
-                        @error('days') <span class="text-red-500">{{ $message }}</span>@enderror
+
 
                         <textarea wire:model.defer="itenary" id="itenary" name="itenary" rows="4" cols="50" class="form-control my-4" placeholder="Enter Itenary">
 
@@ -118,12 +121,12 @@
                     <td>
                         {{ $loop->iteration }}
                     </td>
-                    <td>{{ $package->destination_id}}</td>
-                    <td>{{ $package->name}}</td>
+                    <td>{{ $package->Destination->name}}</td>
+                    <td>{{ $package->Category->name}}</td>
                     <td>{{ $package->packagename}}</td>
                     <td>{{ $package->duration}}</td>
                     <td>{{ $package->days}}</td>
-                    <td>{{ $package->itenary}}</td>
+                    <td>{{Str::limit($package->itenary, 150, $end='...')}}</td>
                     <td>{{ $package->rates}}</td>
                     <td style="width:150px;"><img src="{{ asset('storage/'.$package->image_id) }}" class="pack_img" /></td>
                     <td>

@@ -38,6 +38,8 @@ Route::get('testimonial', [FrontController::class, 'testimonial']);
 Route::get('contact', [FrontController::class, 'contact']);
 Route::get('texi_service', [FrontController::class, 'texiservices']);
 Route::get('hotel_resorts', [FrontController::class, 'hotels']);
+Route::get('booking', [FrontController::class, 'booking']);
+Route::post('storeEnquiry', [FrontController::class, 'storeEnquiry']);
 
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);

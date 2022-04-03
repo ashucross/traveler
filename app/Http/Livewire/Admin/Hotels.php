@@ -10,7 +10,7 @@ class Hotels extends Component
 {
 
     use WithFileUploads;
-    public $hotel_id, $hotel, $location, $discription, $price, $image;
+    public $hotel_id, $hotel, $location, $discription, $price, $image, $hotels;
 
     public function render()
     {
@@ -21,6 +21,7 @@ class Hotels extends Component
 
     public function addNewHotel()
     {
+        $this->reset();
         $this->dispatchBrowserEvent('show-hotelform');
     }
 
@@ -46,7 +47,7 @@ class Hotels extends Component
 
             'price' => $this->price,
             'image' => $Imagename,
-
+            'status'  => $this->status,
         ]);
         session()->flash('message', $this->hotel_id ? 'Hotel Updated' : 'Hotel Created');
         $this->dispatchBrowserEvent('hide-hotelform');
@@ -61,7 +62,7 @@ class Hotels extends Component
         $this->discription = $hotels->discription;
         $this->price = $hotels->price;
 
-
+        $this->status = $hotels->status;
         $this->image = $hotels->image;
     }
 

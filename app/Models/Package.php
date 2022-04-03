@@ -16,9 +16,10 @@ class Package extends Model
         'image_id',
         'packagename',
         'duration',
-        'days',
+        
         'itenary',
-        'rates'
+        'rates',
+        'status'
     ];
 
     public function destination(): BelongsTo

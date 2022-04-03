@@ -65,7 +65,7 @@
         <h5 class="text-danger text-center">{{ session('message') }}</h5>
         @endif
 
-        <table class="table table-striped">
+        <table class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th>Count</th>
@@ -88,7 +88,7 @@
                     <td>{{ $texi->model}}</td>
                     <td>{{ $texi->drivername}}</td>
                     <td>{{ $texi->texinumber}}</td>
-                    <td>{{ $texi->name}}</td>
+                   
                     <td>{{ $texi->drivernumber}}</td>
                     <td>{{ $texi->rates}}</td>
 

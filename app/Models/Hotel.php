@@ -16,6 +16,7 @@ class Hotel extends Model
         'price',
         'contact',
         'image',
+        'satus'
        
     ];
 }

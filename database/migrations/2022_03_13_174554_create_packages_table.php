@@ -21,8 +21,8 @@ class CreatePackagesTable extends Migration
             $table->string('packagename')->unique();
             $table->string('duration');
             $table->string('rates');
-            $table->string('days');
             $table->longtext('itenary');
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }

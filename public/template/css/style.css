@@ -82,6 +82,10 @@ ul.hamli {
     margin-bottom: 15px;
 }
 
+.text_sizeform2 {
+    height: 50px;
+}
+
 a.hamlink {
     font-size: 1.2rem;
     font-weight: 600;
@@ -91,7 +95,7 @@ a.hamlink {
 h1.whyhead {
     background: cadetblue;
     color: aliceblue;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 0px;
     font-family: monospace;
 }
@@ -116,7 +120,7 @@ img.tex_img {
 
 .texi_wrap {
     border: 2px solid;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #63a4ff;
     background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
 }
@@ -248,7 +252,7 @@ img {
 }
 
 .btn-mod1 {
-    border-radius: 15px;
+    border-radius: 5px;
     border: none;
 }
 
@@ -831,7 +835,7 @@ img {
 
 .imghover:hover::before {
     background: rgba(83, 173, 50, .70);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .imghover:hover::after {
@@ -1505,7 +1509,7 @@ a.xolor {
 }
 
 .about-img img {
-    border-radius: 10px;
+    border-radius: 5px;
     height: 400px;
 }
 
@@ -2410,6 +2414,10 @@ a.xolor {
     .uliconpakage {
         display: none !important;
     }
+    .pack_img {
+        height: 50px;
+        width: auto;
+    }
 
     .bigform {
         display: none !important;
@@ -3074,7 +3082,7 @@ img.pak_img {
 
 .border_pak {
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     /* box-shadow: 2px 5px 5px 2px; */
     background: #f0efe8;

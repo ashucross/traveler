@@ -8,7 +8,7 @@ use App\Models\Category;
 
 class Categories extends Component
 {
-    public $destinations, $Destination_id, $name, $category_id, $category;
+    public $destinations, $Destination_id, $name, $category_id, $category, $categories;
     public function render()
     {
         $this->destinations = Destination::all();
@@ -20,6 +20,7 @@ class Categories extends Component
 
     public function addNewCat()
     {
+        $this->reset();
         $this->dispatchBrowserEvent('show-catform');
     }
 
@@ -38,7 +39,8 @@ class Categories extends Component
             'name' => $this->name,
 
         ]);
-        $this->name = "";
+       
+   
         session()->flash('message', $this->category_id ? 'Category Updated' : 'Category Created');
         $this->dispatchBrowserEvent('hide-catform');
     }

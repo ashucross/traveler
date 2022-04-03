@@ -8,13 +8,12 @@ use App\Models\User;
 use App\Models\Package;
 use App\Models\Texi;
 use App\Models\Hotel;
+use App\Models\Enquiry;
 use DB;
 use Auth;
 
 class FrontController extends Controller
 {
-
-    //
     public function index(Request $request)
     {
         $packages = Package::with('Destination', 'Category')->get();
@@ -22,7 +21,9 @@ class FrontController extends Controller
         $hotels = Hotel::all();
 
         $countVisitor = DB::table('shetabit_visits')->count();
+
         $ip = $request->ip();
+
         if ($ip) {
             $exist = DB::table('shetabit_visits')->where('ip', $ip)->first();
             if (empty($exist)) {
@@ -30,7 +31,67 @@ class FrontController extends Controller
             }
         }
 
-        return view('front.index', compact('countVisitor', 'packages', 'texis', 'hotels'));
+        $alltexis = [];
+        $alltexis1 = [];
+
+        $singleArr = [];
+        if ($texis) {
+            foreach ($texis as $key => $texi) {
+                if ($key >= 0 && $key <= 2) {
+                    $alltexis[] = $texi;
+                }
+            }
+            foreach ($texis as $key => $texi) {
+                if ($key >= 3 && $key <= 6) {
+                    $alltexis1[] = $texi;
+                }
+            }
+         
+            $singleArr[] = $alltexis;
+            $singleArr[] = $alltexis1;
+         
+        } 
+        $allpackages = [];
+        $allpackages1 = [];
+      
+        $singleArr3 = [];
+        if ($packages) {
+            foreach ($packages as $key => $package) {
+                if ($key >= 0 && $key <= 2) {
+                    $allpackages[] = $package;
+                }
+            }
+            foreach ($packages as $key => $package) {
+                if ($key >= 3 && $key <= 6) {
+                    $allpackages1[] = $package;
+                }
+            }
+         
+            $singleArr3[] = $allpackages;
+            $singleArr3[] = $allpackages1;
+        } 
+
+        $allhotels = [];
+        $allhotels1 = [];
+        $allhotels3 = [];
+        $singleArr2 = [];
+        if ($hotels) {
+            foreach ($hotels as $key => $hotel) {
+                if ($key >= 0 && $key <= 2) {
+                    $allhotels[] = $hotel;
+                }
+            }
+            foreach ($hotels as $key => $hotel) {
+                if ($key >= 3 && $key <= 6) {
+                    $allhotels1[] = $hotel;
+                }
+            }
+        
+            $singleArr2[] = $allhotels;
+            $singleArr2[] = $allhotels1;
+         
+        } 
+        return view('front.index', compact('countVisitor', 'singleArr2', 'singleArr', 'singleArr3'));
     }
     public function about()
     {
@@ -38,7 +99,8 @@ class FrontController extends Controller
     }
     public function package()
     {
-        return view('front.package');
+        $packages = Package::with('Destination', 'Category')->get();
+        return view('front.package', compact('packages'));
     }
     public function blog()
     {
@@ -55,13 +117,17 @@ class FrontController extends Controller
 
     public function texiservices()
     {
-        return view('front.texiservice');
+       
+        $texis = Texi::all();
+
+        return view('front.texiservice', compact('texis'));
     }
 
 
     public function hotels()
     {
-        return view('front.hotelfront');
+        $hotels = Hotel::all();
+        return view('front.hotelfront', compact('hotels'));
     }
 
     public function logout(Request $request)
@@ -69,4 +135,25 @@ class FrontController extends Controller
         Auth::logout();
         return redirect('/login');
     }
+
+
+    public function booking($id,$texi){
+        dd($id);
+    }
+
+    public function storeEnquiry(Request $req){
+       
+        Enquiry::create([
+            'name' => $req->name,
+            'email' => $req->email,
+            'phone' => $req->phone,
+            'address' => $req->address,
+            'product_id' => $req->product_id,
+            'product_type' => $req->product_type,
+          ]);
+          
+          return response()->json(['success'=>'Form is successfully submitted!']);
+    
+    }
+    
 }
