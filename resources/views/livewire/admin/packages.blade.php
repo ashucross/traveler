@@ -2,7 +2,7 @@
 
     <!-- Button trigger modal -->
     <button wire:click.prevent="addNewPack" type="button" class="btn btn-info float-right mr-5 mt-5 mb-3 py-2" data-toggle="modal" data-target="#packForm">
-        Packages
+       Add Packages
     </button>
 
     <!-- Modal -->
@@ -128,7 +128,7 @@
                     <td>{{ $package->days}}</td>
                     <td>{{Str::limit($package->itenary, 150, $end='...')}}</td>
                     <td>{{ $package->rates}}</td>
-                    <td style="width:150px;"><img src="{{ asset('storage/'.$package->image_id) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ asset('/'.$package->image_id) }}" class="pack_img" /></td>
                     <td>
                         <button wire:click="editPackage({{ $package->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#packForm">Edit</button>
                         <button wire:click="deletePackage({{ $package->id }})" class="btn-danger btn_opt">delete</button>

@@ -8,7 +8,7 @@
     <!-- Modal -->
     <div class="modal fade" id="texiForm" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog" role="document">
-            <form wire:submit.prevent="storeEnquiry" enctype="multipart/form-data">
+            <form wire:submit.prevent="storeTexi" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Destination</h5>
@@ -92,7 +92,7 @@
                     <td>{{ $texi->drivernumber}}</td>
                     <td>{{ $texi->rates}}</td>
 
-                    <td style="width:150px;"><img src="{{ asset('storage/'.$texi->image) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ '/'.$texi->image }}" class="pack_img" /></td>
                     <td>
                         <button wire:click="editTexi({{ $texi->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#texiForm">Edit</button>
                         <button wire:click="deleteTexi({{ $texi->id }})" class="btn-danger btn_opt">delete</button>

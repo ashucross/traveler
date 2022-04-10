@@ -10,7 +10,7 @@
             <div class="texi_wrap">
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <img class="tex_img mx-2 my-2" src="{{ asset('storage/'.$texi->image) }}" alt="">
+                        <img class="tex_img mx-2 my-2" src="{{ '/'.$texi->image }}" alt="">
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <h5 class="texi_model mt-4"><strong>Model :- </strong>{{$texi->model}}</h5>

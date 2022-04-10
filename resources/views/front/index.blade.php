@@ -110,7 +110,7 @@
                                     <h4 class="card-title text_sizeform">{{$pack->packagename}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$pack->image_id) }}" alt="Card image cap"></a>
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ '/'.$pack->image_id }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
                                     <h4 class="card-title text_sizeform">{{$pack->packagename}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$pack->image_id) }}" alt="Card image cap"></a>
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ '/'.$pack->image_id }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -290,7 +290,7 @@
                                     <h4 class="card-title text_sizeform">{{$tex->model}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$tex->image) }}" alt="Card image cap"></a>
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ '/'.$tex->image }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>
@@ -348,7 +348,7 @@
                                     <h4 class="card-title text_sizeform">{{$hot->hotel}}</h4>
                                 </div>
                                 <div class="card mb-2">
-                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ asset('storage/'.$hot->image) }}" alt="Card image cap"></a>
+                                    <a href="texi_service"><img class="card-img-top slider_main3" src="{{ '/'.$hot->image }}" alt="Card image cap"></a>
 
                                 </div>
                             </div>

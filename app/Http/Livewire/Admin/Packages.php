@@ -7,13 +7,15 @@ use Livewire\Component;
 use App\Models\Destination;
 use App\Models\Category;
 use App\Models\Package;
+//use GuzzleHttp\Psr7\Request;
 use Livewire\WithFileUploads;
+use Illuminate\Http\Request;
 
 
 class Packages extends Component
 {
     use WithFileUploads;
-    public $category_id, $categories, $destinations, $packages,$status, $destination_id,$image_id, $package_id, $packagename, $duration, $itenary, $rates, $file;
+    public $category_id, $categories, $destinations, $packages,$status, $destination_id,$image_id, $package_id, $packagename, $duration, $itenary, $rates, $file,$image;
     public function render()
     {
         $packages = Package::with('Destination')->get();
@@ -36,9 +38,9 @@ class Packages extends Component
         $this->dispatchBrowserEvent('show-packform');
     }
 
-    public function storePackage()
-    {
-
+    public function storePackage(Request $request)
+    { 
+        
         $this->validate([
             'destination_id' => 'required',
             'category_id' => 'required',
@@ -51,8 +53,8 @@ class Packages extends Component
 
         ]);
 
-        $Filename = $this->file->store('files', 'public');
-
+        $Filename = $this->file->store('files', 'real_public');
+   
 
 
         Package::updateOrCreate(['id' => $this->package_id], [

@@ -10,7 +10,7 @@
             <div class="col-md-6 col-sm-12">
                 <div class="row my-5 ml-0 border_pak">
                     <div class="col-md-5">
-                        <img src="{{ asset('storage/'.$package->image_id) }}" class="mt-4 ml-2 pak_img" alt="">
+                        <img src="{{ asset('/'.$package->image_id) }}" class="mt-4 ml-2 pak_img" alt="">
                     </div>
 
                     <div class="col-md-7">

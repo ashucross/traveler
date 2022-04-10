@@ -81,6 +81,7 @@
             <tbody>
                 @if (!empty($hotels))
                 @foreach($hotels as $hotel)
+
                 <tr>
                     <td>
                         {{ $loop->iteration }}
@@ -91,7 +92,7 @@
 
                     <td>{{ $hotel->price}}</td>
 
-                    <td style="width:150px;"><img src="{{ asset('storage/'.$hotel->image) }}" class="pack_img" /></td>
+                    <td style="width:150px;"><img src="{{ '/' . $hotel->image }}" class="pack_img" /></td>
                     <td>
                         <button wire:click="editHotel({{ $hotel->id }})" class="btn-info btn_opt" data-toggle="modal" data-target="#hotelForm">Edit</button>
                         <button wire:click="deleteHotel({{ $hotel->id }})" class="btn-danger btn_opt">delete</button>

@@ -10,7 +10,7 @@ class Hotels extends Component
 {
 
     use WithFileUploads;
-    public $hotel_id, $hotel, $location, $discription, $price, $image, $hotels;
+    public $hotel_id, $hotel, $location, $discription, $price, $image, $hotels, $contact,$status;
 
     public function render()
     {
@@ -28,7 +28,7 @@ class Hotels extends Component
     public function storeHotel()
     {
 
-        $this->validate([
+         $this->validate([
 
             'hotel' => 'required|min:3',
             'location' => 'required|min:3',
@@ -37,8 +37,9 @@ class Hotels extends Component
             'price' => 'required|min:3',
             'image' => '',
         ]);
-        $Imagename = $this->image->store('hotel', 'public');
-
+ 
+       /*  $Imagename->storeAs(public_path('images'), $image, 'real_public'); */
+        $Imagename = $this->image->store('hotel', 'real_public');
 
         Hotel::updateOrCreate(['id' => $this->hotel_id], [
             'hotel' => $this->hotel,

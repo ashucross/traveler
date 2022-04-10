@@ -18,6 +18,7 @@ class TexiServices extends Component
         return view('livewire.admin.texi-services')
             ->layout('layouts.main');
     }
+    
     public function addNewTexi()
     {
         $this->dispatchBrowserEvent('show-texiform');
@@ -35,7 +36,7 @@ class TexiServices extends Component
             'rates' => 'required|min:3',
             'image' => '',
         ]);
-        $Imagename = $this->image->store('texi', 'public');
+        $Imagename = $this->image->store('texi', 'real_public'); 
 
 
         Texi::updateOrCreate(['id' => $this->texi_id], [
