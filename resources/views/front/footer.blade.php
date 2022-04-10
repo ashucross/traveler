@@ -1,6 +1,6 @@
    <!-- footer start -->
    <div class="footer">
-       <div class="container">
+       <div class="container-fluid">
            <div class="row">
                <!-- footer-about-start -->
                <div class=" col-lg-3 col-md-3 col-sm-3 col-xs-12">

@@ -64,6 +64,10 @@ Created by :        https://easetemplate.com/
     display: none;
 }
 
+img.login_logo {
+    height: 150px;
+}
+
 #ham2 {
     display: none;
     background: black;

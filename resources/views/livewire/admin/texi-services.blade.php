@@ -8,7 +8,7 @@
     <!-- Modal -->
     <div class="modal fade" id="texiForm" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" wire:ignore.self>
         <div class="modal-dialog" role="document">
-            <form wire:submit.prevent="storeTexi" enctype="multipart/form-data">
+            <form wire:submit.prevent="storeEnquiry" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Destination</h5>
